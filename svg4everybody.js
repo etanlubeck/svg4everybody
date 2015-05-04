@@ -50,7 +50,6 @@
 
 				if (!xhr.s) {
 					xhr.s = [];
-
 					xhr.open('GET', url_root);
 
 					xhr.onload = onload;
@@ -71,10 +70,9 @@
 
 		requestAnimationFrame(onframe);
 	}
-
-	if (IE9TO11) {
+    // Removed statement if(IE9TO11) { } to get CORS to work.
 		onframe();
-	}
+
 })(
 	document,
 	document.getElementsByTagName('use'),
